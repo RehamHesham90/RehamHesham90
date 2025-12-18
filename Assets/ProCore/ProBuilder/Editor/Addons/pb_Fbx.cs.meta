@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 3fce8ab926626f84a988bc7e668a97ba
+timeCreated: 1505754415
+licenseType: Store
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/Editor/Addons/pb_Fbx.cs
+  uploadId: 229588

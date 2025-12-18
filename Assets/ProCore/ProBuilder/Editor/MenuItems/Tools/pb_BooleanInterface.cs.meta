@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0c92e8890b3c18e4fa925168cb2ea002
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/Editor/MenuItems/Tools/pb_BooleanInterface.cs
+  uploadId: 229588

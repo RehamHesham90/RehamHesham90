@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c61d11485194048a3bd2b542a79c6ca6
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/Editor/MenuItems/Selection/pb_EdgeSelection.cs
+  uploadId: 229588

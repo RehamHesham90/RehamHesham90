@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 513fdd2b40fc74479babf983da872481
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/Editor/MenuItems/Geometry/pb_DetachDeleteFace.cs
+  uploadId: 229588

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a81d2e96055698b44978529b4db3ce83
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/Editor/MenuItems/Repair/pb_RemoveDegenerateTris.cs
+  uploadId: 229588

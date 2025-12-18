@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e2fd96fc912386d428fb624a682acd70
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/Editor/MenuItems/Tools/pb_MaterialSelection.cs
+  uploadId: 229588

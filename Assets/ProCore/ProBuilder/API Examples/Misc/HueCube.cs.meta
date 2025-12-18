@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 57910de6743b3ac49a59ade4c17e5764
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/API Examples/Misc/HueCube.cs
+  uploadId: 229588
