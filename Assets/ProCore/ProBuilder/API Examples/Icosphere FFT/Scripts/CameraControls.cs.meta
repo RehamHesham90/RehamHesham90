@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 32fdb03cf8ee6094c841dd6f93b3e66a
+timeCreated: 1430420844
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/API Examples/Icosphere FFT/Scripts/CameraControls.cs
+  uploadId: 229588

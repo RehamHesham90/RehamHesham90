@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3d47ec8636eedb54bbd43b455ba5a552
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/Editor/MenuItems/Geometry/pb_BridgeEdges.cs
+  uploadId: 229588

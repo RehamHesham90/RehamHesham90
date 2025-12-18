@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9636271c872be7643b621a5f9766de4d
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/Editor/MenuItems/Geometry/pb_FreezeTransform.cs
+  uploadId: 229588

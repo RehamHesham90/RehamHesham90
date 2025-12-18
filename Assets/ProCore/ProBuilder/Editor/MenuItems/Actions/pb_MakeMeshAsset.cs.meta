@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a6e30a090463d5f4083d9e62cdedc291
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/Editor/MenuItems/Actions/pb_MakeMeshAsset.cs
+  uploadId: 229588

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 2bc5914fb09a6db40abae1d25f7c85ee
+timeCreated: 1485808349
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/Editor/MenuItems/Repair/pb_UpgradeBasicToAdvanced.cs
+  uploadId: 229588

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c00f613790b6fff49b970d38a9db8e38
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/Editor/MenuItems/Geometry/pb_ExtrudeElement.cs
+  uploadId: 229588

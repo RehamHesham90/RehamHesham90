@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 254380e632ef56c4bbadfe9c7bf38a54
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/Editor/MenuItems/Selection/pb_InvertSelection.cs
+  uploadId: 229588

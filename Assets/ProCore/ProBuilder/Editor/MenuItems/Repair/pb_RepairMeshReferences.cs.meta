@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c5d698f0521a16d4aa395123cc981041
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/Editor/MenuItems/Repair/pb_RepairMeshReferences.cs
+  uploadId: 229588

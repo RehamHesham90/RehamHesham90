@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5f1099344d2fd4346ac294e9360c6335
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/Editor/MenuItems/Actions/pb_GenerateUV2.cs
+  uploadId: 229588

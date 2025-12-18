@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 013665b62f86cd34da56ceeceb5b5411
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/Editor/MenuItems/Geometry/pb_Triangulate.cs
+  uploadId: 229588

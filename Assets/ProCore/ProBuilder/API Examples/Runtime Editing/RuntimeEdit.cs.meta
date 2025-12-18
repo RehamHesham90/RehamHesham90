@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e239496fc63271243ab37cc30b42a0e8
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/API Examples/Runtime Editing/RuntimeEdit.cs
+  uploadId: 229588

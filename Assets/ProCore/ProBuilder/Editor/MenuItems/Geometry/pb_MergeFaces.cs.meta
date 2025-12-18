@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 82309ed2f1b8d5d46a4b10b95dfa2338
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111418
+  packageName: ProBuilder
+  packageVersion: 2.9.8f3
+  assetPath: Assets/ProCore/ProBuilder/Editor/MenuItems/Geometry/pb_MergeFaces.cs
+  uploadId: 229588
