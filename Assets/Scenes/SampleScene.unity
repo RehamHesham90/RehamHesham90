@@ -13650,7 +13650,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &216653252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38979,6 +38979,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4f4c2c89ec2bfc84abfbf1677992c5f8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1082271958561512970, guid: 4f4c2c89ec2bfc84abfbf1677992c5f8, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -39159,9 +39163,9 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.26
   m_Speed: 0
-  m_Acceleration: 10
+  m_Acceleration: 30
   avoidancePriority: 1
-  m_AngularSpeed: 10
+  m_AngularSpeed: 1500
   m_StoppingDistance: 0.75
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -73901,9 +73905,9 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.26
   m_Speed: 0
-  m_Acceleration: 10
+  m_Acceleration: 30
   avoidancePriority: 50
-  m_AngularSpeed: 10
+  m_AngularSpeed: 1500
   m_StoppingDistance: 0.75
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -98690,9 +98694,9 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.2
   m_Speed: 0
-  m_Acceleration: 10
+  m_Acceleration: 30
   avoidancePriority: 50
-  m_AngularSpeed: 10
+  m_AngularSpeed: 1500
   m_StoppingDistance: 0.75
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -108439,9 +108443,9 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.24
   m_Speed: 0
-  m_Acceleration: 10
+  m_Acceleration: 30
   avoidancePriority: 50
-  m_AngularSpeed: 10
+  m_AngularSpeed: 1500
   m_StoppingDistance: 0.75
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -117569,9 +117573,9 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.26
   m_Speed: 0
-  m_Acceleration: 10
+  m_Acceleration: 30
   avoidancePriority: 5
-  m_AngularSpeed: 10
+  m_AngularSpeed: 1500
   m_StoppingDistance: 0.75
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
