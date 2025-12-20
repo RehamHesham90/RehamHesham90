@@ -407,7 +407,7 @@ AnimatorController:
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 0
+    m_DefaultBool: 1
     m_Controller: {fileID: 9100000}
   - m_Name: IsWalking
     m_Type: 9
@@ -455,7 +455,7 @@ AnimatorController:
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 0
+    m_DefaultBool: 1
     m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
@@ -768,10 +768,10 @@ AnimatorStateMachine:
     m_Position: {x: 650, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8409592737934799050}
-    m_Position: {x: 650, y: -90, z: 0}
+    m_Position: {x: 650, y: -100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 217335669064696650}
-    m_Position: {x: 1000, y: -60, z: 0}
+    m_Position: {x: 1010, y: -60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6160005421700366438}
     m_Position: {x: 900, y: -240, z: 0}
