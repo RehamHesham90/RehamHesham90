@@ -23,6 +23,20 @@ public class EnterGame : MonoBehaviour
         SceneManager.LoadScene(nextIndex);
     }
 
+    public void QuitGame()
+    {
+        // Debug log to confirm it works while testing in the Editor
+        Debug.Log("Game is exiting...");
+
+        // Quits the application
+        Application.Quit();
+
+        // Optional: Close play mode while in the Editor
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
