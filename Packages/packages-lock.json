@@ -290,8 +290,13 @@
       }
     },
     "com.unity.test-framework": {
+<<<<<<< Updated upstream
       "version": "1.6.0",
       "depth": 0,
+=======
+      "version": "1.5.1",
+      "depth": 3,
+>>>>>>> Stashed changes
       "source": "builtin",
       "dependencies": {
         "com.unity.ext.nunit": "2.0.3",
