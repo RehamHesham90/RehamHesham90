@@ -803,7 +803,8 @@ MonoBehaviour:
   RotatingSpeed: 360
   PickupSfx: {fileID: 0}
   PickupVfxPrefab: {fileID: 0}
-  WeaponPrefab: {fileID: 0}
+  WeaponPrefab: {fileID: 8537574491802868223, guid: 06d044452386a274eb6ff7abed36f4e6,
+    type: 3}
 --- !u!1 &8962211193563462022
 GameObject:
   m_ObjectHideFlags: 0

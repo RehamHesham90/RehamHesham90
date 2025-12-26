@@ -55,6 +55,7 @@ namespace Unity.FPS.Gameplay
         [Header("Debug")] [Tooltip("Color of the projectile radius debug view")]
         public Color RadiusColor = Color.cyan * 0.2f;
 
+
         ProjectileBase m_ProjectileBase;
         Vector3 m_LastRootPosition;
         Vector3 m_Velocity;
@@ -195,6 +196,11 @@ namespace Unity.FPS.Gameplay
             }
 
             m_LastRootPosition = Root.position;
+
+
+
+
+
         }
 
         bool IsHitValid(RaycastHit hit)
@@ -256,6 +262,29 @@ namespace Unity.FPS.Gameplay
                 AudioUtility.CreateSFX(ImpactSfxClip, point, AudioUtility.AudioGroups.Impact, 1f, 3f);
             }
 
+            // Check if the collided object has the AdvancedZombieAI component
+            AdvancedZombieAI zombieAI = collider.gameObject.GetComponent<AdvancedZombieAI>();
+
+            // === ZOMBIE COMMUNICATION ===
+            // 1. If the component is found (meaning we hit a zombie)
+            if (zombieAI != null)
+            {
+                // 2. We call the public method on the zombie's script instance.
+                // This is the command telling the zombie to take damage.
+                zombieAI.TakeDamage(Damage);
+                Destroy(this.gameObject);
+            }
+            // Check if we hit a 'Zombie' or another target
+            if (collider.gameObject.CompareTag("Zombie"))
+            {
+                // Put your hit logic here (e.g., call a 'TakeDamage' function on the zombie)
+                Debug.Log(zombieAI);
+
+                // Destroy the zombie object (optional: implement health instead)
+                // Destroy(collision.gameObject, MaxLifeTime);
+            }
+
+
             // Self Destruct
             Destroy(this.gameObject);
         }
@@ -265,5 +294,34 @@ namespace Unity.FPS.Gameplay
             Gizmos.color = RadiusColor;
             Gizmos.DrawSphere(transform.position, Radius);
         }
+
+        /*private void OnCollisionEnter(Collision collision)
+        {
+
+            // Check if the collided object has the AdvancedZombieAI component
+            AdvancedZombieAI zombieAI = collision.gameObject.GetComponent<AdvancedZombieAI>();
+
+            // === ZOMBIE COMMUNICATION ===
+            // 1. If the component is found (meaning we hit a zombie)
+            if (zombieAI != null)
+            {
+                // 2. We call the public method on the zombie's script instance.
+                // This is the command telling the zombie to take damage.
+                zombieAI.TakeDamage(Damage);
+                Destroy(collision.gameObject);
+            }
+            // Check if we hit a 'Zombie' or another target
+            if (collision.gameObject.CompareTag("Zombie"))
+            {
+                // Put your hit logic here (e.g., call a 'TakeDamage' function on the zombie)
+                Debug.Log(zombieAI);
+
+                // Destroy the zombie object (optional: implement health instead)
+                // Destroy(collision.gameObject, MaxLifeTime);
+            }
+
+            // Always destroy the projectile upon impact
+            //Destroy(gameObject, MaxLifeTime);
+        }*/
     }
 }
