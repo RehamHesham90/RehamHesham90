@@ -3,22 +3,7 @@ guid: 0902616738a74e149929fee65a063ea6
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: 3c657ebfe3d565c4796bfdb147342d8a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Walkie talkie Antenna
-    second: {fileID: 2100000, guid: a647a43d70a1b3944bafbca84d84c0df, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Walkie talkie base
-    second: {fileID: 2100000, guid: a824f0af05e8c704284fd8e58706b607, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

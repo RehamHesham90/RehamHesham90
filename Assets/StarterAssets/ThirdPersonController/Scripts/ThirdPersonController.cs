@@ -34,24 +34,24 @@ namespace StarterAssets
 
         [Space(10)]
         [Tooltip("The height the player can jump")]
-        public float JumpHeight = 1.2f;
+        public float JumpHeight = 1f;
 
         [Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
-        public float Gravity = -15.0f;
+        public float Gravity = -9.81f;
 
         [Space(10)]
         [Tooltip("Time required to pass before being able to jump again. Set to 0f to instantly jump again")]
-        public float JumpTimeout = 0.50f;
+        public float JumpTimeout = 0.25f;
 
         [Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
-        public float FallTimeout = 0.15f;
+        public float FallTimeout = 0.2f;
 
         [Header("Player Grounded")]
         [Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
         public bool Grounded = true;
 
         [Tooltip("Useful for rough ground")]
-        public float GroundedOffset = -0.14f;
+        public float GroundedOffset = -0.15f;
 
         [Tooltip("The radius of the grounded check. Should match the radius of the CharacterController")]
         public float GroundedRadius = 0.28f;
@@ -213,14 +213,32 @@ namespace StarterAssets
 
         private void Move()
         {
+            // 1. Calculate the difference between camera and player
+            float cameraYaw = _mainCamera.transform.eulerAngles.y;
+            float characterYaw = transform.eulerAngles.y;
+            float deltaAngle = Mathf.DeltaAngle(characterYaw, cameraYaw);
+            float rotationThreshold = 25f; // Degrees before body turns
+
             // set target speed based on move speed, sprint speed and if sprint is pressed
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
-            // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
+            // Flag to check if we are just turning in place
+            bool isTurningInPlace = false;
 
-            // note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
-            // if there is no input, set the target speed to 0
-            if (_input.move == Vector2.zero) targetSpeed = 0.0f;
+            // Check if there is no input, but we exceeded the camera rotation threshold
+            if (_input.move == Vector2.zero)
+            {
+                if (Mathf.Abs(deltaAngle) > rotationThreshold)
+                {
+                    // Force the animation to play walking speed so feet move
+                    targetSpeed = MoveSpeed;
+                    isTurningInPlace = true;
+                }
+                else
+                {
+                    targetSpeed = 0.0f;
+                }
+            }
 
             // a reference to the players current horizontal velocity
             float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
@@ -232,12 +250,9 @@ namespace StarterAssets
             if (currentHorizontalSpeed < targetSpeed - speedOffset ||
                 currentHorizontalSpeed > targetSpeed + speedOffset)
             {
-                // creates curved result rather than a linear one giving a more organic speed change
-                // note T in Lerp is clamped, so we don't need to clamp our speed
                 _speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude,
                     Time.deltaTime * SpeedChangeRate);
 
-                // round speed to 3 decimal places
                 _speed = Mathf.Round(_speed * 1000f) / 1000f;
             }
             else
@@ -251,12 +266,22 @@ namespace StarterAssets
             // normalise input direction
             Vector3 inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
 
-            // note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
-            // if there is a move input rotate player when the player is moving
-            if (_input.move != Vector2.zero)
+            // ROTATION LOGIC 
+            // We rotate if there is input OR if we are turning in place
+            if (_input.move != Vector2.zero || isTurningInPlace)
             {
-                _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg +
-                                  _mainCamera.transform.eulerAngles.y;
+                // If moving normally, calculate target based on input
+                if (_input.move != Vector2.zero)
+                {
+                    _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg +
+                                      _mainCamera.transform.eulerAngles.y;
+                }
+                // If turning in place, target is the Camera's current direction
+                else
+                {
+                    _targetRotation = _mainCamera.transform.eulerAngles.y;
+                }
+
                 float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity,
                     RotationSmoothTime);
 
@@ -267,9 +292,15 @@ namespace StarterAssets
 
             Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
 
+            // MOVEMENT LOGIC
+            // If we are turning in place, we want the animation (handled above) but NOT the physical movement.
+            // So we override the horizontal movement vector to Zero if isTurningInPlace is true.
+            Vector3 horizontalMotion = isTurningInPlace
+                ? Vector3.zero
+                : targetDirection.normalized * (_speed * Time.deltaTime);
+
             // move the player
-            _controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
-                             new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+            _controller.Move(horizontalMotion + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 
             // update animator if using character
             if (_hasAnimator)

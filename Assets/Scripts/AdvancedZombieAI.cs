@@ -548,6 +548,12 @@ public class AdvancedZombieAI : MonoBehaviour
     void Update()
     {
         // The main loop routes control to the current state's "Update" function
+
+        //animator moving speed updator, for instant update of current zombie moving speed state
+        //-keep going Amr you can fix this, your team depend on you at the final moments, your team deserve to try to the last moments for!, keep rolling-
+        zombieMoves.SetFloat("Speed", agent.speed);
+
+        // Main loop for machine state of the moving zombie, so this is the main logic for loopable action of the zombie like tracking, attaking, feeding, gitting hit or dmage or die.
         switch (currentState)
         {
             case State.IdleWalkSlow:
